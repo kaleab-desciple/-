@@ -44,4 +44,5 @@ Copy code
 
 ```bash
 git clone https://github.com/your-username/student-registration.git
+git clone https://github.com/kaleabdisciple/student-registration.git
 cd student-registration
