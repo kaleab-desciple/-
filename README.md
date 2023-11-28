@@ -1,7 +1,7 @@
 # -
 ## about the publisher
 NAME : Kaleab legesse tesema
-Class : Section B
+CLASS : Section B
 ID : 3202/14
 
 
