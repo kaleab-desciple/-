@@ -4,16 +4,19 @@ import java.util.Scanner;
 
 
 class StudentManagementSystem {
+
+    // provide limit
     private static final int MAX_STUDENTS = 100;
     private static final int MAX_DEPARTMENTS = 100;
     private static final int MAX_GRADES = 100;
     private static final int MAX_COURSES = 100;
 
 
+    // maximum student information collection arraay
     private static Student[] students = new Student[MAX_STUDENTS];
 
     private static Department[] deps = new Department[MAX_DEPARTMENTS];
-    //    private static courses [] ALL_courses = new courses[MAX_COURSES];
+    
     private static Grade[] grades = new Grade[MAX_GRADES];
 
     private static Courses[] courses = new Courses[MAX_COURSES];
@@ -32,7 +35,7 @@ class StudentManagementSystem {
         System.out.println("********************------------------------------------------------------------*************************************");
         System.out.println("******************---------------------------------------------------------------************************************");
         System.out.println("*************------------------------- [ HARAMAYA UNIVERSITY ] --------------------**********************************");
-        System.out.println("****************------ STUDENT REGISTRATION SYSTEM PROGRAM BY ASSIGNMENT --------************************************");
+        System.out.println("****************------ --STUDENT REGISTRATION SYSTEM PROGRAM ASSIGNMENT --------************************************");
         System.out.println("******************------------------------------------------------------------***************************************");
         System.out.println("********************-------------------------------------------------------******************************************");
         System.out.println("**********************---------------------------------------------------********************************************");
@@ -83,6 +86,9 @@ class StudentManagementSystem {
         scanner.close();
     }
 
+
+
+    // to view each student information by taking students roll_number
     private static void ToViewStudentInformation(Scanner scanner) {
         {
             System.out.print("Enter student roll to view information: ");
@@ -113,7 +119,8 @@ class StudentManagementSystem {
                 // display courses
                 for (int j = 0; j < courseCounter; j++) {
                     if (courses[j].rollNumber == rollNumber) {
-
+                        
+                        // iterating on courses  
                         for (int a = 0; a < sc.length; a++) {
                             System.out.println("course " + (a + 1) + " name: " + courses[j].sc[a].crs_name + ": AND  hour: " + courses[j].sc[a].crs_hour);
                         }
@@ -129,8 +136,8 @@ class StudentManagementSystem {
         }
     }
 
+    // to delete each student information by taking students roll_number
     private static void ToDeleteStudentInformation(Scanner scanner) {
-
         System.out.print("Enter student roll number to delete information: ");
         int rollNumber = scanner.nextInt();
 
@@ -184,8 +191,8 @@ class StudentManagementSystem {
     }
 
 
+    // to update each student information by taking students roll_number
     private static void ToUpdateStudentInformation(Scanner scanner) {
-
         System.out.print("Enter student roll number to update information: ");
         int rollNumber = scanner.nextInt();
 
@@ -222,8 +229,8 @@ class StudentManagementSystem {
 }
 
 
+    // student grade adder
     private static void ToAddGrade(Scanner scanner) {
-
         if (gradeCounter < MAX_GRADES) {
             System.out.print("Enter student roll number: ");
             int rollNumber = scanner.nextInt();
@@ -244,6 +251,7 @@ class StudentManagementSystem {
         }
     }
 
+        // student roll_number adder
     private static void ToAddStudent(Scanner scanner) {
         if (student_num < MAX_STUDENTS) {
             System.out.print("Enter student name: ");
