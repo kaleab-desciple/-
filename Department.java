@@ -1,5 +1,6 @@
 package sms_updated;
 
+// class department
 class Department  {
     int rollNumber;
     String collage_name;
